@@ -4,15 +4,16 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.nogami.hvm.db.DBExterno;
 import com.nogami.hvm.db.DBconn;
 
 /**
  * Created by nogami on 23/04/2018.
  */
 
-public class UsuarioDao extends DBconn{
+public class UsuarioDao extends DBExterno{
 
-    DBconn con;
+    DBExterno con;
     Context contex;
     SQLiteDatabase db;
     Cursor cur;
@@ -24,7 +25,7 @@ public class UsuarioDao extends DBconn{
     }
 
     public boolean validarUsuario(String usuario, String clave){
-        con=new DBconn(contex);
+        con=new DBExterno(contex);
         db=con.getReadableDatabase();
         sql=" select * from usuario where usuario='"+usuario+"' and clave='"+clave+"'";
         cur=db.rawQuery(sql, null);
@@ -36,7 +37,7 @@ public class UsuarioDao extends DBconn{
     }
 
     public Cursor listarUsuario(String usuario){
-        con=new DBconn(contex);
+        con=new DBExterno(contex);
         db=con.getReadableDatabase();
         sql=" select * from usuario where usuario='"+usuario+"'";
         cur=db.rawQuery(sql, null);
