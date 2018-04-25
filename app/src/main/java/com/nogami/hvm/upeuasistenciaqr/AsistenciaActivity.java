@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nogami.hvm.R;
 import com.nogami.hvm.dao.UsuarioDao;
@@ -35,8 +36,12 @@ public class AsistenciaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(usu.validarUsuario(txtUsuario.getText().toString(), txtClave.getText().toString())){
                     ingresar();
+                    txtUsuario.setText("");
+                    txtClave.setText("");
                 }else{
-                    msg.setText("Intente Nuevamente...!");
+                    Toast.makeText(AsistenciaActivity.this, "User o Password incorrecto intentelo de nuevo!!", Toast.LENGTH_SHORT).show();
+                    txtUsuario.setText("");
+                    txtClave.setText("");
                 }
 
             }

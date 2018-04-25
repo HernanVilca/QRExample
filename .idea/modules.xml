@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HVM.iml" filepath="$PROJECT_DIR$/HVM.iml" />
+      <module fileurl="file://F:\android 2018\git\QRExample\HVM.iml" filepath="F:\android 2018\git\QRExample\HVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QRExample.iml" filepath="$PROJECT_DIR$/QRExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\android 2018\git\QRExample\app\app.iml" filepath="F:\android 2018\git\QRExample\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dbexterno/dbexterno.iml" filepath="$PROJECT_DIR$/dbexterno/dbexterno.iml" />
+      <module fileurl="file://F:\android 2018\git\QRExample\dbexterno\dbexterno.iml" filepath="F:\android 2018\git\QRExample\dbexterno\dbexterno.iml" />
     </modules>
   </component>
 </project>

@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.nogami.hvm.upeuasistenciaqr.AsistenciaActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!-- BACKGROUND START -->
 
-        <TextView
-            android:id="@+id/idTitulo"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/u" />
+
+    <!-- BACKGROUND END -->
+
+    <!-- LOGO START -->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="252dp"
+        android:layout_height="168dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo" />
+
+    <!-- LOGO END -->
+
+    <!-- USERNAME FIELD START -->
+
+    <LinearLayout
+        android:id="@+id/username_container"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/password_container"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/usuarioxd" />
+
+        <EditText
+            android:id="@+id/idUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/title_login"
-            android:textAlignment="center" />
+            android:inputType="textNoSuggestions"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
 
-        <TableLayout
-            android:id="@+id/tableLayout"
+    </LinearLayout>
+
+    <!-- USERNAME FIELD END -->
+
+    <!-- PASSWORD FIELD START -->
+
+    <LinearLayout
+        android:id="@+id/password_container"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_container"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/candado" />
+
+        <EditText
+            android:id="@+id/idClave"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/idTitulo"
-            android:layout_marginTop="23dp">
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    </LinearLayout>
 
-                <EditText
-                    android:id="@+id/idUsuario"
-                    android:layout_width="348dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/tableLayout"
-                    android:ems="10"
-                    android:hint="@string/txt_user"
-                    android:inputType="textPersonName" />
+    <!-- PASSWORD FIELD END -->
 
-            </TableRow>
+    <!-- LOGIN BUTTON START -->
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <Button
+        android:id="@+id/IdIngresar"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
 
-                <EditText
-                    android:id="@+id/idClave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/tableLayout"
-                    android:ems="10"
-                    android:hint="@string/txt_password"
+        android:layout_alignStart="@+id/password_container"
+        android:layout_below="@+id/password_container"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="Login"
+        android:textStyle="bold" />
 
-                    android:inputType="textPersonName|textPassword" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/IdIngresar"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/tableLayout"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/btn_sing" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/idCancelar"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/tableLayout"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/btn_cancel" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-                <TextView
-                    android:id="@+id/idMsg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="20dp" />
-            </TableRow>
-
-        </TableLayout>
+    <!-- LOGIN BUTTON END -->
 
 
 
+    <!-- SOCIAL BUTTONS START -->
 
-    </RelativeLayout>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/social_buttons_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:gravity="center">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        <Button
+            android:id="@+id/idCancelar"
+            android:layout_width="122dp"
+            android:layout_height="30dp"
+            android:background="@drawable/coffe3" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/idMsg"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+
+    <!-- SOCIAL BUTTONS END -->
+
+
+</RelativeLayout>
